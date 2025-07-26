@@ -9,6 +9,7 @@ init(autoreset=True) # Initialize Colorama with auto-reset enabled
 
 # class to represent a user
 
+'''class user .....'''
 class User:
     def __init__(self, username):
         self.username = username
@@ -54,6 +55,20 @@ class Library:
             print(Fore.BLUE + f'User Online!: !,  {self.logged_in_user.username}')
         else:
             print(Fore.YELLOW + f'No User Online!')
+            
+            
+            #version 2: 
+    def add_book(self, title):
+        try:
+            with open('books.txt', 'a') as fb:
+                fb.write(title +'\n')
+            print(Fore.YELLOW + f"Book '{title}' added to library!!")
+        except Exception as e:
+            print(Fore.RED + f'Error adding book: {e}')
+            
+            
+    
+            
         
             
                 
