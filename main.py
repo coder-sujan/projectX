@@ -24,8 +24,9 @@ while True:
     print('1. Login')
     print('2. Logout')
     print('3. Check Login Status')
-    print('4. Add Book To Lib')
-    print('5. Exit')
+    print('4. Add Book To Library')
+    print('5. View Books')
+    print('6. Exit')
     
     
     try:
@@ -42,7 +43,9 @@ while True:
             title = input('Enter A Title: ')
             lib.add_book(title)
         elif choice == 5:
-            print(Fore.GREEN + 'Exiting the MATRIX! GOODBYE!!') 
+            lib.view_books()
+        elif choice ==6:
+            print(Fore.GREEN + 'Exiting the Library! GOODBYE!!') 
             break
         else:
             print(Fore.RED + 'Invalid Choice- Please Choose Form 1 - 4')

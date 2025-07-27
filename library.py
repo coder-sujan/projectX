@@ -66,6 +66,28 @@ class Library:
         except Exception as e:
             print(Fore.RED + f'Error adding book: {e}')
             
+    def view_books(self):
+        try:
+            if not os.path.exists("books.txt"):
+                print(Fore.YELLOW + "NO Books Available Yet!!")
+                return
+            
+            with open('books.txt', 'r') as f:
+                books.f.read().strip().splitlines()
+                
+            
+            if books:
+                print(FORE.CYAN + '\n ---->>>Available Books in Library<<<---- ')
+                for book in books:
+                    print('-' + book)
+            else:
+                print(Fore.YELLOW + "Library is Empty")
+        except Exception as e:
+            print(Fore.RED + f'Could not read Books: {e}')
+                
+            
+    
+            
             
     
             
